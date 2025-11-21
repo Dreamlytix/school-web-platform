@@ -1,11 +1,13 @@
-import "./App.css";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
 
-function App() {
+// Pages
+import Home from "./pages/home/Home";
+
+export default function App() {
   return (
-    <>
-      <h1 class="text-3xl font-bold underline">Hello world!</h1>
-    </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+    </Routes>
   );
 }
-
-export default App;

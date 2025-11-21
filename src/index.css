@@ -1,1 +1,36 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap");
+
+body {
+  background: #e7e7e7;
+  font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif;
+}
+
+/* VERTICAL MARQUEE FOR NOTICE SECTION */
+@keyframes marqueeVertical {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.animate-marqueeVertical {
+  animation: marqueeVertical 20s linear infinite;
+}
+
+/* ACHIEVEMENT IMAGE MARQUEE */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-slide {
+  display: flex;
+  animation: slide 20s linear infinite;
+}
