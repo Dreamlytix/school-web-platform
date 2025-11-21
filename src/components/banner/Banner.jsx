@@ -7,7 +7,7 @@ const slides = [
   "https://www.tgvea.com/web_admin/images/3350_1739515538.jpg",
 ];
 
-export default function Banner({ showBanner }) {
+export default function Banner({ showBanner, title }) {
   const [index, setIndex] = useState(0);
 
   // Auto-slide every 3 seconds
@@ -57,13 +57,13 @@ export default function Banner({ showBanner }) {
 
           {/* Content */}
           <div className="relative z-10 w-full max-w-7xl mx-auto px-4">
-            <h1 className="text-4xl md:text-3xl font-bold text-white drop-shadow-lg">Contact</h1>
+            <h1 className="text-4xl md:text-3xl font-bold text-white drop-shadow-lg">{title}</h1>
 
             {/* Breadcrumb */}
             <div className="flex items-center gap-3 text-white mt-4 text-lg font-semibold">
               <span className="cursor-pointer hover:text-yellow-300">Home</span>
               <span>|</span>
-              <span className="text-yellow-200">Contact</span>
+              <span className="text-yellow-200">{title}</span>
             </div>
           </div>
         </div>

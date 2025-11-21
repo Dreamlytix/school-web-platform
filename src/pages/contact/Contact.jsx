@@ -5,9 +5,9 @@ import Layout from "../../components/layout/Layout";
 
 export default function Contact() {
   return (
-    <Layout showBanner={false}>
-      <div className="mx-auto w-full max-w-7xl p-4 py-6 lg:py-8">
-        <div className="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 lg:grid-cols-2 gap-12">
+    <Layout showBanner={false} title="Contact">
+      <div className="mx-auto w-full max-w-7xl px-4 py-18">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* LEFT — CONTACT FORM */}
           <div>
             <h3 className="text-sm font-semibold text-black tracking-wide">CONTACT US</h3>

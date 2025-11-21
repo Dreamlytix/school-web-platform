@@ -3,12 +3,14 @@ import { Routes, Route } from "react-router-dom";
 
 // Pages
 import Home from "./pages/home/Home";
+import Teacher from "./pages/teacher/Teacher";
 import Contact from "./pages/contact/Contact";
 
 export default function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/teachers" element={<Teacher />} />
       <Route path="/contact-us" element={<Contact />} />
     </Routes>
   );
