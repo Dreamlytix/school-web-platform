@@ -18,7 +18,7 @@ export default function Header() {
   ];
 
   return (
-    <>
+    <div className="pb-23">
       {/* HEADER */}
       <header className="absolute inset-x-0 top-0 z-50">
         <nav className="flex items-center justify-between p-2 md:px-8">
@@ -91,6 +91,6 @@ export default function Header() {
           </div>
         </div>
       </aside>
-    </>
+    </div>
   );
 }
