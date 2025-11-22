@@ -177,6 +177,14 @@ export default function Teacher() {
   return (
     <Layout showBanner={false} title="Teachers">
       <div className="mx-auto w-full max-w-7xl px-4 py-16">
+        {/* Heading */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-green-800">Our Teachers</h2>
+          <p className="text-gray-600 mt-2">
+            Celebrating excellence in academics, excellence in academics, excellence in academics, sports, science, and cultural events.
+          </p>
+        </div>
+
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {team.map((member, index) => (
             <div key={index} className="border border-green-800/40 rounded-2xl shadow-lg flex flex-col justify-between overflow-hidden">

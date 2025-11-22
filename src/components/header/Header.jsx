@@ -13,7 +13,7 @@ export default function Header() {
 
   const menuItems = [
     { name: "Home", path: "/" },
-    { name: "About", path: "/about-us" },
+    { name: "About Us", path: "/about-us" },
     { name: "Academic", path: "/academic" },
     { name: "Non Academic", path: "/non-academic" },
     { name: "Facilities", path: "/facilities" },
@@ -43,16 +43,38 @@ export default function Header() {
           </button>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex lg:gap-x-6">
-            {menuItems.map((item, index) => (
-              <NavLink
-                key={index}
-                to={item.path}
-                className={({ isActive }) => `text-md font-medium ${isActive ? "text-green-800" : "text-black"} hover:text-green-800 hover:underline`}
-              >
-                {item.name}
-              </NavLink>
-            ))}
+          <div className="hidden lg:flex lg:gap-x-6 relative">
+            {menuItems.map((item, index) =>
+              item.name === "Admissions" ? (
+                <div key={index} className="relative group">
+                  <span className="cursor-pointer text-md font-medium hover:text-green-800">{item.name}</span>
+
+                  {/* DROPDOWN */}
+                  <div className="absolute top-6 left-0 bg-white text-black shadow-lg rounded-lg py-2 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition duration-200 w-44">
+                    <NavLink
+                      to="/fee-details"
+                      className={({ isActive }) => `block px-4 py-2 text-sm hover:bg-gray-100 ${isActive && "text-green-800 font-semibold"}`}
+                    >
+                      Fee Details
+                    </NavLink>
+                    <NavLink
+                      to="/online-admission"
+                      className={({ isActive }) => `block px-4 py-2 text-sm hover:bg-gray-100 ${isActive && "text-green-800 font-semibold"}`}
+                    >
+                      Online Admission
+                    </NavLink>
+                  </div>
+                </div>
+              ) : (
+                <NavLink
+                  key={index}
+                  to={item.path}
+                  className={({ isActive }) => `text-md font-medium ${isActive ? "text-green-800" : "text-black"} hover:text-green-800`}
+                >
+                  {item.name}
+                </NavLink>
+              )
+            )}
           </div>
 
           {/* Desktop Popup Trigger */}
