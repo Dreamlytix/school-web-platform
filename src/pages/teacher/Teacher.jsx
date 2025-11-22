@@ -176,7 +176,7 @@ export default function Teacher() {
 
   return (
     <Layout showBanner={false} title="Teachers">
-      <div className="mx-auto w-full max-w-7xl px-4 py-18">
+      <div className="mx-auto w-full max-w-7xl px-4 py-16">
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {team.map((member, index) => (
             <div key={index} className="border border-green-800/40 rounded-2xl shadow-lg flex flex-col justify-between overflow-hidden">
@@ -229,7 +229,10 @@ export default function Teacher() {
 
             {/* BUTTON */}
             <div className="flex justify-center mt-8">
-              <button onClick={() => setSelected(null)} className="bg-green-800 text-white px-8 py-3 rounded-lg text-sm hover:bg-green-900 transition">
+              <button
+                onClick={() => setSelected(null)}
+                className="bg-green-800 text-white px-8 py-3 rounded-lg text-sm cursor-pointer hover:bg-green-900 transition"
+              >
                 Go Back
               </button>
             </div>
