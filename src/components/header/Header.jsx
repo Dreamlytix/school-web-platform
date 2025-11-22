@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 // Assets & Icons
 import Logo from "../../assets/logo.png";
@@ -45,9 +45,13 @@ export default function Header() {
           {/* Desktop Menu */}
           <div className="hidden lg:flex lg:gap-x-6">
             {menuItems.map((item, index) => (
-              <Link key={index} to={item.path} className="text-md font-medium text-black hover:text-green-800 hover:underline">
+              <NavLink
+                key={index}
+                to={item.path}
+                className={({ isActive }) => `text-md font-medium ${isActive ? "text-green-800" : "text-black"} hover:text-green-800 hover:underline`}
+              >
                 {item.name}
-              </Link>
+              </NavLink>
             ))}
           </div>
 

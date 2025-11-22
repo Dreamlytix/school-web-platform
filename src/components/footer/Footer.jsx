@@ -1,5 +1,6 @@
 import React from "react";
 import FooterLogo from "../../assets/footer-logo.jpeg";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   const footerInfo = [
@@ -57,10 +58,26 @@ export default function Footer() {
           </h3>
           <div className="w-10 h-0.5 bg-[#f4b50e] mt-2 mb-4"></div>
           <ul className="text-sm space-y-3 text-blue-100">
-            <li>About us.</li>
-            <li>Alumni.</li>
-            <li>Our Teachers.</li>
-            <li>Achievements.</li>
+            <li>
+              <Link to="/alumni" className="hover:underline transition">
+                Alumni.
+              </Link>
+            </li>
+            <li>
+              <Link to="/about-us" className="hover:underline transition">
+                About us.
+              </Link>
+            </li>
+            <li>
+              <Link to="/our-teachers" className="hover:underline transition">
+                Our Teachers.
+              </Link>
+            </li>
+            <li>
+              <Link to="/achievements" className="hover:underline transition">
+                Achievements.
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -71,10 +88,26 @@ export default function Footer() {
           </h3>
           <div className="w-10 h-0.5 bg-[#f4b50e] mt-2 mb-4"></div>
           <ul className="text-sm space-y-3 text-blue-100">
-            <li>Privacy Policy.</li>
-            <li>Terms & Conditions.</li>
-            <li>FAQ.</li>
-            <li>Contact us.</li>
+            <li>
+              <Link to="/faq" className="hover:underline transition">
+                FAQ.
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact-us" className="hover:underline transition">
+                Contact Us.
+              </Link>
+            </li>
+            <li>
+              <Link to="/privacy-policy" className="hover:underline transition">
+                Privacy Policy.
+              </Link>
+            </li>
+            <li>
+              <Link to="/terms-conditions" className="hover:underline transition">
+                Terms & Conditions.
+              </Link>
+            </li>
           </ul>
         </div>
 
