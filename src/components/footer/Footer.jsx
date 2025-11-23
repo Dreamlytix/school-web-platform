@@ -1,6 +1,10 @@
 import React from "react";
-import FooterLogo from "../../assets/footer-logo.jpeg";
+
+// react router dom
 import { Link } from "react-router-dom";
+
+// images
+import FooterLogo from "../../assets/footer-logo.jpeg";
 
 export default function Footer() {
   const footerInfo = [
@@ -69,8 +73,8 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link to="/our-teachers" className="hover:underline transition">
-                Our Teachers.
+              <Link to="/our-faculty" className="hover:underline transition">
+                Our Faculty.
               </Link>
             </li>
             <li>
@@ -93,9 +97,10 @@ export default function Footer() {
                 FAQ.
               </Link>
             </li>
+
             <li>
-              <Link to="/contact-us" className="hover:underline transition">
-                Contact Us.
+              <Link to="/achievements" className="hover:underline transition">
+                Achievements.
               </Link>
             </li>
             <li>
